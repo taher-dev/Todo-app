@@ -10,19 +10,21 @@ export default function TodoInput({ addTodo }) {
     setText("");
   };
 
-  const handleChange = (e) => {
-    setText(e.target.value);
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex mb-4">
       <input
-        type="test"
+        type="text"
         value={text}
-        onChange={handleChange}
+        onChange={(e) => setText(e.target.value)}
         placeholder="Add a new task..."
+        className="flex-grow border rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
-      <button type="submit">Add</button>
+      <button
+        type="submit"
+        className="bg-blue-500 hover:bg-blue-600 text-white px-4 rounded-r"
+      >
+        Add
+      </button>
     </form>
   );
 }
