@@ -13,7 +13,7 @@ export default function TodoItem({ todo, toggleTodo, deleteTodo }) {
         onClick={() => deleteTodo(todo.id)}
         className="ml-3 bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded"
       >
-        ❌
+        ⨉
       </button>
     </li>
   );
